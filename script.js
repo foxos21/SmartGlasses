@@ -21,6 +21,7 @@ buttons.forEach(button => {
     }
 
     costElement.classList.toggle("selected");
+    button.classList.toggle("selected"); // Add this line to toggle the selected class
     totalCostElement.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
   });
 });
