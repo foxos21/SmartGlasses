@@ -49,14 +49,14 @@ body {
 
 .button {
   display: inline-block;
-  margin: 5px;
+  margin: 9px;
   border: none;
-  background-color: #000;
+  background-color: #282c3b;
   color: white;
   cursor: pointer;
   border: 2px solid transparent;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 7px;
+  padding: 9px;
   transition: border-color 0.3s ease;
 }
 
