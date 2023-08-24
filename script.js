@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll(".button");
 const totalCostElement = document.getElementById("total-cost");
 const exportButton = document.getElementById("export-button");
 
-const fixedCost = 10; // Change this value to your desired fixed cost
+const fixedCost = 9; // Change this value to your desired fixed cost
 let totalCost = fixedCost;
 let selectedButtons = {};
 
