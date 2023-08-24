@@ -1,0 +1,124 @@
+body {
+  background-color: #222;
+  position: relative; /* Changed from absolute to relative */
+  margin: 0;
+  color: white; /* Set all text color to white */
+}
+
+.gradient {
+  position: absolute; /* Positioned absolutely for the whole body */
+  inset: 0;
+  z-index: -1; /* Positioned behind other content */
+  --size: 250px;
+  --speed: 50s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(hsl(158, 82%, 57%, 0.85), hsl(252, 82%, 57%, 0.85));
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 500px;
+  }
+}
+
+body {
+  background-color: #222;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  z-index: 2; /* Ensures the content is on top of the background */
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 5px;
+  border: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.button.selected {
+  border-color: #6C00FF;
+  box-shadow: 0 0 10px rgba(108, 0, 255, 0.5); /* Added glow effect for selected buttons */
+}
+
+.button img {
+  max-width: 70px;
+  border-radius: 15px;
+}
+
+.cost {
+  display: block;
+  color: white;
+}
+
+#total-cost {
+  font-weight: bold;
+  color: white;
+}
+
+#export-button {
+  background-color: #6C00FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#export-button:hover {
+  background-color: #4800a8;
+}
+
+/* Gradient Background */
+.gradient {
+  --size: 250px;
+  --speed: 50s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(hsl(158, 82%, 57%, 0.85), hsl(252, 82%, 57%, 0.85));
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 500px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
