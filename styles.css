@@ -62,7 +62,7 @@ body {
 
 .button.selected {
   border-color: #6C00FF;
-  box-shadow: 0 0 10px rgba(108, 0, 255, 0.50); /* Added glow effect for selected buttons */
+  box-shadow: 0 0 10px rgba(108, 0, 255, 0.5); /* Added glow effect for selected buttons */
 }
 
 .button img {
